@@ -1,0 +1,131 @@
+mkdir vagrant-dev
+
+cd vagrant-dev
+
+vagrant init
+
+VagrantFile
+
+config.vm.box is the box to be configured from the vagrant cloud
+
+config.vm.box_check_update provides warnings if new version is available for the public VM
+
+
+Vagrant synched folders:
+
+vagrant ssh
+
+ls /vagrant
+	- Vagrantfile
+
+Vagrant automatically creates this in the running box and syncs
+
+vagrant.vm.synced_folder maps first folder data in your host machine to VM box
+
+vagrant reload (shortcut to run vagrant halt and vagrant up)
+ 	- there might be Linux - Ubuntu text encoding issues 
+
+Vagrant Networking:
+
+Port Forwarding
+Private Networks
+Public Networks
+
+Port - is a number 1 and 65555 assigned to a TCP Packet
+
+Known Ports
+21 - FTP
+80 - HTTP
+443 - HTTPS/TLS
+
+Port Forwarding:
+
+connect to box
+
+sudo apt-get install -y nginx
+to test: curl localhost
+open browser: localhost:8080 (error)
+
+because no application on your host system listening on port 8080
+
+
+config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+
+open browser: localhost:8080
+
+- you will see default ngnix page running in ubuntu vagrant box
+
+Port Forwarding allows to access applications running in box from host.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

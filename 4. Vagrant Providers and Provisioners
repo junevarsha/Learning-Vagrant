@@ -1,0 +1,29 @@
+Vagrant Providers:
+
+Allow Vagrant to define a box for particular Hypervisor
+
+vagrant ssh
+
+vmstat -s 
+
+lscpu
+
+To reduce memory and increase cpu tweak the Vagrant file provider configs:
+
+ config.vm.provider "virtualbox" do |vb|
+   # Display the VirtualBox GUI when booting the machine
+   vb.gui = true
+
+   # Customize the amount of memory on the VM:
+   vb.memory = "512"
+   vb.cpus = 2
+ end
+
+To enable GUI check video ram allocation: 
+
+ lspci -v -s 00.02.0
+
+ Add this line
+
+ vb.customize ["modifyvm", :id, "--vram", "16"]
+ 

@@ -1,0 +1,17 @@
+1. Run your first box (VM):
+
+cd ~
+
+mkdir myfirstbox
+
+cd myfirstbox
+
+vagrant init bento/ubuntu-16.04
+ - creates Vagrantfile
+
+vagrant up
+
+ - local cache of the boxes can be found in .vagrant.d
+
+ 
+

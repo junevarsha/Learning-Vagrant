@@ -1,0 +1,22 @@
+vagrant status
+
+vagrant global-status
+
+vagrant halt <id>
+
+Connect via SSH:
+
+	cd myfirstbox
+
+	vagrant up 
+
+	vagrant ssh
+
+	vagrant destroy
+ 		- Gives you plain vanilla OS
+
+Vagrant Cloud
+
+	- Displays VMs based on Organization
+
+
