@@ -27,3 +27,19 @@ To enable GUI check video ram allocation:
 
  vb.customize ["modifyvm", :id, "--vram", "16"]
  
+
+ Provisioners:
+
+  run first time when the box is setup
+
+  when we want to install ngnix to our base box:
+
+  config.vm.provision "shell", path: "provisioners/nginx-install.sh"
+
+  create a file ngnix-install.sh in provisioners folder
+
+  sudo apt-get update
+  sudo apt-get install -y nginx
+
+  
+  
